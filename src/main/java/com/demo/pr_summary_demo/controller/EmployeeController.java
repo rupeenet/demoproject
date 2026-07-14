@@ -37,9 +37,5 @@ public class EmployeeController {
             return service.getEmployee(id);
     }
 
-    @GetMapping("/welcome")
-    public String welcome() {
-        return "Welcome to Employee API";
-        }
-    
+     
 }
