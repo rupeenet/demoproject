@@ -17,4 +17,5 @@ public class GlobalExceptionHandler {
 
         return Map.of("message", ex.getMessage());
     }
+    
 }

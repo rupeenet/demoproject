@@ -4,6 +4,7 @@ package com.demo.pr_summary_demo.controller;
 
 import com.demo.pr_summary_demo.dto.EmployeeRequest;
 import com.demo.pr_summary_demo.dto.EmployeeResponse;
+import com.demo.pr_summary_demo.model.Employee;
 import com.demo.pr_summary_demo.service.EmployeeService;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,9 +33,15 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
-    public EmployeeResponse getEmployee(
-            @PathVariable Integer id) {
-
-        return service.getEmployee(id);
+    public EmployeeResponse getEmployee(@PathVariable Integer id) {
+            return service.getEmployee(id);
     }
+
+    @GetMapping("/welcome")
+    public String welcome() {
+        return "Welcome to Employee API";
+        }
+
+
+     
 }
